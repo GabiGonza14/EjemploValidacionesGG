@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$name = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING));
+$name = trim(filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
 $phone = trim($_POST['phone']);
 $captcha_input = trim($_POST['captcha']);
